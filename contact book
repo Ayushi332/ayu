@@ -1,0 +1,44 @@
+def update_contact():
+    name = input("Enter name :")
+    for contact in contacts:
+        if contact==name:
+            phone = input("Enter the new phone number: ")
+            contacts[name] = phone
+            print("Contact updated sucessfully.")
+            break
+        else:
+            print("This contact does not exist.")
+
+def search_contact():
+    name = input("Enter name :")
+    for contact in contacts:
+        if contact.lower() == name.lower():
+             print("Contact Found")
+             print(contact,contacts[contact])
+             break
+        else:
+             print("Contact not found.")
+
+
+while True:
+    print("\nContact Book Menu:")
+    print("1. Add Contact")
+    print("2. Delete Contact")
+    print("3. Update Contact")
+    print("4. Search Contact")
+    print("5. Display Contacts")
+    print("6. Exit")
+
+    choice = int(input("Enter your choice (1-6):"))
+
+    if choice == 1:
+        add_contact()
+
+
+
+
+
+
+
+
+
